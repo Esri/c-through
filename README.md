@@ -2,7 +2,7 @@
 
 C-Through is a prototype for interactive 3D urban planning analysis on the web based on the ArcGIS JS API 4.3. The application visualizes and analysis 3D features according to user preferences and makes it possible to select and filter specific buildings, floors and units by attributes for further investigation. Charts and statistics are available according to selection and filtering. The application was implemented in the scope of an internship at Esri R&D Zurich and initially featured data from three locations: Zurich, Vancouver and Dubai. Those datasets are not publicly available.
 
-[View it live](https://github.com/ARCGIS/c-through)
+[View it live](https://arcgis.github.io/c-through/)
 
 The following demo application shows imaginary buildings and usage data. Its purpose is to give access to the code base and to show how the application was implemented with the ArcGIS JS API. To learn more about the background and data processing as well as details and challenges about the implementation, review the following resources: 
 * <a target="blank" href="https://blogs.esri.com/esri/arcgis/2017/04/12/c-through-a-prototype-for-interactive-3d-urban-planning-analysis-on-the-web/">ArcGIS Blogpost</a>
@@ -62,7 +62,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-A copy of the license is available in the repository's [license.txt]( https://github.com/ARCGIS/c-through/license.txt) file.
+A copy of the license is available in the repository's [license.txt]( https://github.com/ArcGIS/c-through/blob/master/license.txt ) file.
 
 
 
