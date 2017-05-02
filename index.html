@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>c-through</title>
+
+  <!-- ArcGIS JavaScript API 4.3 stylesheet -->
+  <link rel="stylesheet" href="https://jsdev.arcgis.com/4.3/esri/css/main.css">
+  <link rel="stylesheet" href="https://jsdev.arcgis.com/4.3/dijit/themes/claro/claro.css" />
+  <!-- calcite-web -->
+  <link rel="stylesheet" href="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.31/css/calcite-web.min.css">
+
+  <link href="slider/nouislider.min.css" rel="stylesheet">
+
+  <script src="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.31/js/calcite-web.min.js"></script>
+  <script src="slider/nouislider.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    dojoConfig= {
+        has: {
+            "dojo-firebug": true,
+            "dojo-debug-messages": true
+        },
+        packages: [{
+        name: "c-through",
+        location: location.pathname.replace(/\/[^/]+$/, '') + "app"
+        }], 
+        parseOnLoad: false,
+        async: true
+    };
+  </script>
+  <!-- ArcGIS JavaScript API 4.3  -->
+  <script src="https://jsdev.arcgis.com/4.3/"></script>
+  <!-- load app.js -->
+  <script>
+  require(["c-through/welcome",  "dojo/domReady!"],function(Welcome){
+    var welcome = new Welcome();
+    welcome.init();    
+  });
+  </script>
+  <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+  <script src="https://www.amcharts.com/lib/3/pie.js"></script>
+  <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+  <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+</head>
+
+<body class="claro">
+  <div id="toolsMenu"></div>
+  <div id="viewDiv"></div>
+ 
+</body>
+
+</html>
