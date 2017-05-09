@@ -33,6 +33,8 @@ The application is designed in a way that it can also be used for other location
 - usagename-property: change to attribute name containing usage type
 - floorname / OIDname / buildingIDname / areaname: respectively
 
+5. Before deploying the application in production, make sure you are in possession of all required licenses.
+
 ## Resources
 The following APIs have been used to create this application:
 
