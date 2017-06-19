@@ -123,24 +123,17 @@ define([
 
                         if (dataItem.pulled) {
                             chart.pullSlice(dataItem, 0);
-                            if (state === "city" && settings.layer1.visible === true) {
-                                settings.layer2.renderer = applyRenderer.createRenderer(settings.values, settings.color, settings.usagename);
-                            }
-                            if (state === "building" && settings.layer2.visible === true) {
-                                settings.layer1.renderer = applyRenderer.createRenderer(settings.values, settings.color, settings.usagename);
-                            }
+ 
+                            settings.layer1.renderer = applyRenderer.createRenderer(settings.values, settings.color, settings.usagename);
+                            
                             view.environment.lighting.directShadowsEnabled = true;
                             view.environment.lighting.ambientOcclusionEnabled = true;
 
                         } else {
                             chart.pullSlice(dataItem, 1);
 
-                            if (state === "city" && settings.layer1.visible === true) {
-                                settings.layer2.renderer = applyRenderer.createRenderer(selectedvalues, selectedcolor, settings.usagename);
-                            }
-                            if (state === "building" && settings.layer2.visible) {
-                                settings.layer1.renderer = applyRenderer.createRenderer(selectedvalues, selectedcolor, settings.usagename);
-                            }
+                            settings.layer1.renderer = applyRenderer.createRenderer(selectedvalues, selectedcolor, settings.usagename);
+                            
                             view.environment.lighting.directShadowsEnabled = false;
                             view.environment.lighting.ambientOcclusionEnabled = false;
                         }
