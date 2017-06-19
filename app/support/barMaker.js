@@ -205,24 +205,16 @@ define([
                     var min = event.item.dataContext.subdata[0].min;
                     var color = event.item.dataContext.color;
 
-                    if (state === "city" && settings.layer2.visible) {
-                        settings.layer2.renderer = applyRenderer.createRendererVVbar(min, max, color, settings.areaname);
-                    }
-                    if (state === "building" && settings.layer1.visible) {
-                        settings.layer1.renderer = applyRenderer.createRendererVVbar(min, max, color, settings.areaname);
-                    }
+                    settings.layer1.renderer = applyRenderer.createRendererVVbar(min, max, color, settings.areaname);
+                    
                     view.environment.lighting.directShadowsEnabled = false;
                     view.environment.lighting.ambientOcclusionEnabled = false;
                 });
 
                 on(dom.byId("reload"), "click", function (event) {
 
-                    if (state === "city" && settings.layer1.visible === true) {
-                        settings.layer1.renderer = applyRenderer.createRendererVV(selection, settings.areaname);
-                    }
-                    if (state === "building" && settings.layer2.visible) {
-                        settings.layer2.renderer = applyRenderer.createRendererVV(selection, settings.areaname);
-                    }
+                    settings.layer2.renderer = applyRenderer.createRendererVV(selection, settings.areaname);
+                    
                     view.environment.lighting.directShadowsEnabled = true;
                     view.environment.lighting.ambientOcclusionEnabled = true;
                 });
