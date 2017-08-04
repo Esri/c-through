@@ -142,21 +142,6 @@ define([
                 this.view.environment.lighting.ambientOcclusionEnabled = true;
                 this.view.environment.lighting.directShadowsEnabled = true;
 
-                // basemap toggle for switching on and off the basemap (see below ground)
-                var gray = Basemap.fromId("gray");
-                var terrain = Basemap.fromId("topo");
-
-                // bug, does not seem to apply thumbnail anymore since 4.2
-                gray.thumbnailUrl = "img/basemap_thumbnail.PNG";    
-                terrain.thumbnailURL = "img/thumbnail_topo.PNG";
-
-                var toggle = new BasemapToggle({
-                    view: this.view,
-                    nextBasemap: gray
-                });
-                toggle.startup();
-                this.view.ui.add(toggle, "bottom-left");
-
                 // create search widget
                 var searchWidget = new Search({
                     view: this.view
@@ -227,32 +212,6 @@ define([
                                 combinedFilteredFeatures: undefined
                             }
                         });
-                    }.bind(this));
-
-                    // configure basemap toggle to show and hide basemap to see below ground
-                    var toggleDiv = document.getElementsByClassName("esri-component esri-basemap-toggle esri-widget");
-
-                    on(toggleDiv[0], "click", function () {
-                        this.scene.basemap.then(function () {
-                            var basemapTerrain = this.view.basemapTerrain;
-                            if (this.scene.basemap.title === "Light Gray Canvas") {
-                                basemapTerrain.wireframe = {
-                                    mode: "shader",
-                                    wireOpacity: 1.0,
-                                    surfaceOpacity: 0,
-                                    width: 1,
-                                    subdivision: "constant",
-                                    subdivisionReduceLevels: 2
-                                };
-                                basemapTerrain.frontMostTransparent = true;
-
-                            }
-                            else {
-                                basemapTerrain.wireframe = false;
-                                basemapTerrain.frontMostTransparent = false;
-                            }
-
-                        }.bind(this));
                     }.bind(this));
 
                 }.bind(this)).otherwise(function (err) {
