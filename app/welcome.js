@@ -68,7 +68,7 @@ define([
                 domCtr.create("hr", { id: "welcomeLine", className: "animate-bottom", style: "width:300px" }, container);
                 domCtr.create("img", { id: "esri-logo", src: "img/Capture.PNG", style: "width:200px;height:48px", top: "65%", left: "35%" }, container);
 
-                domCtr.create("div", { id: "description1", innerHTML: "Internship poject by Lisa Staehli" }, container);
+                domCtr.create("div", { id: "description1", innerHTML: "Internship project by Lisa Staehli" }, container);
                 domCtr.create("div", { id: "description2", innerHTML: "supervised by Javier Gutierrez" }, container);
                 this.demoLink = domCtr.create("div", { id: "demo-link", innerHTML: "Demo" }, container);
 
