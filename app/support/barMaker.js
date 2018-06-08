@@ -213,7 +213,7 @@ define([
 
                 on(dom.byId("reload"), "click", function (event) {
 
-                    settings.layer2.renderer = applyRenderer.createRendererVV(selection, settings.areaname);
+                    settings.layer1.renderer = applyRenderer.createRendererVV(selection, settings.areaname);
                     
                     view.environment.lighting.directShadowsEnabled = true;
                     view.environment.lighting.ambientOcclusionEnabled = true;
