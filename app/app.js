@@ -167,7 +167,7 @@ define([
                 this.view.ui.add(homeWidget, "top-left");
 
                 // wait until view is loaded
-                this.view.then(function () {
+                this.view.when(function () {
                     // layer1 = active layer (receives renderers, used for statistics, selected)
                     // layer2 = background layer (shows remaining buildings, not selected)
 
