@@ -118,7 +118,7 @@ define([
                     view.hitTest(event.screenPoint).then(function (response) {
                         var result = response.results[0];
 
-                        if (!result.graphic) {
+                        if (!result) {
                             this.menu.resetFilterUI("highlight");
                         }
                         else {
