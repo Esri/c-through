@@ -184,7 +184,7 @@ define([
                             { value: min-1, color: defaultcolor},
                             { value: min, color: color },
                             { value: max, color: color },
-                            { vaue: max+1, color: defaultcolor}
+                            { value: max+1, color: defaultcolor}
                         ]
                     }]
 
