@@ -56,6 +56,7 @@ define([
 ) {
         return Accessor.createSubclass({
             declaredClass: "c-through.VizTool",
+
             constructor: function (params) {
 
                 this.container = params.container;

@@ -46,9 +46,9 @@ define([
     domCtr, win, dom,
     HighlightTool, VizTool, FilterTool
 ) {
-
         return Accessor.createSubclass({
             declaredClass: "c-through.ToolsMenu",
+
             constructor: function (params) {
 
                 this.settings = params.config;

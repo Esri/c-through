@@ -59,7 +59,7 @@ define([
     queryTools, applyRenderer,
     chartMaker, barMaker
 ) {
-    return Accessor.createSubclass({
+        return Accessor.createSubclass({
             declaredClass: "c-through.FilterTool",
 
             constructor: function (params) {

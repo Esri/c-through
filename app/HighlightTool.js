@@ -49,8 +49,9 @@ define([
     domCtr, win, dom, on,
     VizTool, FilterTool, queryTools
 ) {
-    return Accessor.createSubclass({
-        declaredClass: "c-through.HighlightTool",
+        return Accessor.createSubclass({
+            declaredClass: "c-through.HighlightTool",
+
             constructor: function (params) {
 
                 this.container = params.container;
