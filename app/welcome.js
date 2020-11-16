@@ -30,7 +30,7 @@
  */
 
 define([
-    "esri/core/declare",
+    "esri/core/Accessor",
 
     "dojo/dom-construct",
     "dojo/_base/window",
@@ -42,11 +42,12 @@ define([
     "c-through/app"
 
 ], function (
-    declare,
+    Accessor,
     domCtr, win, dom, domStyle, on, mouse,
     App) {
 
-        return declare(null, {
+        return Accessor.createSubclass({
+            declaredClass: "c-through.Welcome",
 
             constructor: function () {
                 

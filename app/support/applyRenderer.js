@@ -21,15 +21,12 @@
    */
 
 define([
-    "esri/core/declare",
-
     "esri/renderers/SimpleRenderer",
     "esri/symbols/MeshSymbol3D",
     "esri/symbols/FillSymbol3DLayer",
     "esri/renderers/UniqueValueRenderer"
 
 ], function (
-    declare,
     SimpleRenderer,
     MeshSymbol3D,
     FillSymbol3DLayer,

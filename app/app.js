@@ -36,7 +36,7 @@
  */
 
 define([
-    "esri/core/declare",
+    "esri/core/Accessor",
     "esri/config",
 
     "esri/WebScene",
@@ -60,7 +60,7 @@ define([
     "c-through/support/queryTools"
 
 ], function (
-    declare, esriConfig,
+    Accessor, esriConfig,
     WebScene, SceneView, SceneLayer, Basemap,
     BasemapToggle, Home,
     dom, on, domCtr, win, domStyle,
@@ -99,7 +99,8 @@ define([
                 ]
         };
 
-        return declare(null, {
+        return Accessor.createSubclass({
+            declaredClass: "c-through.App",
 
             constructor: function () {
 
@@ -214,7 +215,7 @@ define([
                         });
                     }.bind(this));
 
-                }.bind(this)).otherwise(function (err) {
+                }.bind(this)).catch(function (err) {
                     console.error(err);
                 });
 
