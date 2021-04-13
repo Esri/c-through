@@ -21,15 +21,12 @@
    */
 
 define([
-    "esri/core/declare",
-
     "dojo/dom-construct",
     "dojo/_base/window",
 
     "c-through/support/applyRenderer"
 
 ], function (
-    declare,
     domCtr, win,
     applyRenderer
 ) {

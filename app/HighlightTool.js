@@ -32,7 +32,7 @@
  */
 
 define([
-    "esri/core/declare",
+    "esri/core/Accessor",
     "esri/tasks/support/Query",
 
     "dojo/dom-construct",
@@ -45,11 +45,13 @@ define([
     "c-through/support/queryTools"
 
 ], function (
-    declare, Query,
+    Accessor, Query,
     domCtr, win, dom, on,
     VizTool, FilterTool, queryTools
 ) {
-        return declare(null, {
+        return Accessor.createSubclass({
+            declaredClass: "c-through.HighlightTool",
+
             constructor: function (params) {
 
                 this.container = params.container;
@@ -161,7 +163,7 @@ define([
                             }
                         }
 
-                    }.bind(this)).otherwise(function (err) {
+                    }.bind(this)).catch(function (err) {
                         console.error(err);
                     });
                 }.bind(this));
@@ -187,7 +189,7 @@ define([
 
                     callback(buildingID);
 
-                }.bind(this)).otherwise(function (err) {
+                }.bind(this)).catch(function (err) {
                     console.error(err);
                 });
             }
